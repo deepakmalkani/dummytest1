@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Master - Detail to Budget object and stores actuals info for each budget. Used by Mulesoft for integration as well</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>As_Of_Date__c</fullName>
+        <description>Date for which budget actuals is applicable.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date the record was created</inlineHelpText>
+        <label>As Of Date</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>As_Of_Month__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Month in which the cost was recognized</inlineHelpText>
+        <label>As Of Month</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>As_Of_Year__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Year in which the cost was recognized</inlineHelpText>
+        <label>As Of Year</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Budget__c</fullName>
+        <description>Associated master budget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Link to the budget record</inlineHelpText>
+        <label>Budget</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>pse__Budget__c.pse__Project__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Project__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>pse__Budget__c</referenceTo>
+        <relationshipLabel>Budget Actuals</relationshipLabel>
+        <relationshipName>Budget_Actuals</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>ERP_Cost_Actuals__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Stores ERP Cost Actuals of each budget.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Cost recognized in ERP in the specified month and year</inlineHelpText>
+        <label>ERP Cost Actuals</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>ERP_Project_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>ERP Project Code</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ERP_Project_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>ERP Project ID</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ERP_Reference__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>This field will be used by Mulesoft for integration with Oracle ERP system.</description>
+        <externalId>true</externalId>
+        <inlineHelpText>ERP reference ID</inlineHelpText>
+        <label>ERP Reference</label>
+        <length>100</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>ERP_Task_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>ERP Task ID</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ERP_Task_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>ERP Task Name</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ERP_Task_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>ERP Task Number</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expenditure_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Expenditure Type</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Period</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Budget Actuals</relationshipLabel>
+        <relationshipName>Budget_Actuals</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Project__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Project for which budget actuals is being populated in the record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Link to the project record</inlineHelpText>
+        <label>Project</label>
+        <referenceTo>pse__Proj__c</referenceTo>
+        <relationshipLabel>Budget Actuals</relationshipLabel>
+        <relationshipName>Budget_Actuals</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Recognition_Period__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Recognition Period</label>
+        <referenceTo>ffrr__RecognitionPeriod__c</referenceTo>
+        <relationshipLabel>Budget Actuals</relationshipLabel>
+        <relationshipName>Budget_Actuals</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date_formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>DATE( 
+IF( 
+MONTH(As_Of_Date__c) = 1, YEAR(As_Of_Date__c) - 1, YEAR(As_Of_Date__c)), 
+
+IF( 
+MONTH(As_Of_Date__c) = 1, 12, MONTH(As_Of_Date__c)-1), 
+
+1)</formula>
+        <label>Start Date (formula)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ffrrtemplate__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>RM Template</label>
+        <referenceTo>ffrr__Template__c</referenceTo>
+        <relationshipLabel>Budget Actuals</relationshipLabel>
+        <relationshipName>Budget_Actuals</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Budget Actuals</label>
+    <nameField>
+        <displayFormat>BA-{0000}</displayFormat>
+        <label>Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Budget Actuals</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>New_Budget_Actuals</fullName>
+        <availability>online</availability>
+        <description>List button is created to auto populate Project Field</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Budget Actuals</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/{!$Label.Budget_Actuals_Object_Key_Prefix}/e?{!$Label.Budget_Field_Id_New_Budget_Actuals}={!pse__Budget__c.Name}&amp;{!$Label.Budget_Field_Id_New_Budget_Actuals}_lkid={!pse__Budget__c.Id}&amp;retURL={!pse__Budget__c.Id}&amp;
+{!$Label.Project_Field_Id_New_Budget_Actuals}={!pse__Budget__c.pse__Project__c}&amp;{!$Label.Project_Field_Id_New_Budget_Actuals}_lkid={!pse__Budget__c.pse__ProjectId__c}</url>
+    </webLinks>
+</CustomObject>

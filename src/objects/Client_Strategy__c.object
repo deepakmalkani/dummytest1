@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>The Client Strategy object houses data around account strategy and planning related to specifIc account (client) records. These records will be created manually by end users.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Client__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>lookup relationship to account object</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The associated client for this strategy</inlineHelpText>
+        <label>Client</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Client Strategies</relationshipLabel>
+        <relationshipName>Client_Strategies</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Executive_Summary__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Summary of our plan for this account</inlineHelpText>
+        <label>Executive Summary</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Existing_agency_landscape__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What other agencies are engaged at this client?</inlineHelpText>
+        <label>Existing agency landscape</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>KPI_s_Company_Initiatives__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What Key Performance Indicators are being pursued at this client? What initiatives can Mosaic help them achieve?</inlineHelpText>
+        <label>KPI’s/Company Initiatives</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Key_Growth_Areas__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Growth areas for Mosaic with this client</inlineHelpText>
+        <label>Key Growth Areas</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Opportunities__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What opportunities exist for Mosaic at this client?</inlineHelpText>
+        <label>Opportunities</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Outlook_Overall_account_health__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What is the overall outlook for this client?</inlineHelpText>
+        <label>Outlook / Overall account health</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Strengths__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What are the client&apos;s key strengths in the market?</inlineHelpText>
+        <label>Strengths</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Threats__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What threats exist to this client in the market?</inlineHelpText>
+        <label>Threats</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Top_Goal_1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Client&apos;s #1 Goal</inlineHelpText>
+        <label>Top Goal #1</label>
+        <length>150</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Top_Goal_2__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Client&apos;s #2 Goal</inlineHelpText>
+        <label>Top Goal #2</label>
+        <length>150</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Top_Goal_3__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Client&apos;s #3 Goal</inlineHelpText>
+        <label>Top Goal #3</label>
+        <length>150</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Weaknesses__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What are the client&apos;s key weaknesses in the market?</inlineHelpText>
+        <label>Weaknesses</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>Client Strategy</label>
+    <nameField>
+        <displayFormat>CS-{000000}</displayFormat>
+        <label>Client Strategy Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Client Strategies</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

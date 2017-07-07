@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This map contains the generic queues to which a particular CBU request should be routed in Resource Requests.</description>
+    <fields>
+        <fullName>Queue_Owner__c</fullName>
+        <description>Queue to be mapped to the cbu selected in resource request</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Queue Owner</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>CBU Routing Map</label>
+    <pluralLabel>CBU Routing Map</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

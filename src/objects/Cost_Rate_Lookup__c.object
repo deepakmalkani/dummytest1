@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Cost_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>Cost Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Region</label>
+        <referenceTo>pse__Region__c</referenceTo>
+        <relationshipLabel>Cost Rates Lookup</relationshipLabel>
+        <relationshipName>Cost_Rates_Lookup</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <externalId>false</externalId>
+        <label>Role</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Account Coordinator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Account Coordinator, Field (CAN)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Account Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Account Executive</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Account Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Account Supervisor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Assistant Account Executive</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Assistant Content Editor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Assistant Event Producer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Assistant Marketing Operations Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Assistant Market Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Assistant Tour Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Associate Account Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Associate Content Creator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Associate Creative Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Associate Event Producer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Business Information Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Business Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Business Project Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Buyer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Chief Content Officer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Conceptor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Content Art Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Content Creator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Content Editor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Content Measurement &amp; Analytics Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Content Producer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Content Production Accountant</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Content Production Assistant</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Content Production Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Contract Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Copywriter</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Creative Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Design and Production Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Designer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Design Hub Art Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Design Production Coordinator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Design Production Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Digital Media Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Digital Strategy Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Director, Information Service</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Director, Insights</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Director Marketing Operations</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Director of Learning Services</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>District Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Event Producer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Event Production Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Executive Content Creator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Field Manager (CAN)</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Field Operation Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Field Operations Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Jr. Account Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Jr. Art Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Jr. Buyer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Jr. Conceptor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Jr. Content Producer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Jr. Copywriter</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Learning Consultant</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Learning Coordinator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Learning Design Specialist</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Learning Multimedia Specialist</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>LSM Admin</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Marketing Operations Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Market Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Mechanical Production</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>National/Sr. Field Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Operation Coordinator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>President, Client Service</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Pricing Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Procurement Analyst</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Procurement Category Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Procurement Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Procurement Lead</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Procurement Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Program Operation Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Program Operations Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Project Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Project Manager/Digital Producer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Proofreader</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Q&amp;A, Proofing, Translation</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Region Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr./Executive Vice President, Client Service</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. Account Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. Account Executive</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. Account Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. Art Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. Conceptor</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. Designer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. Digital Analyst</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. Digital Media Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. Event Producer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. Field Operations Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. Studio Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. Territory Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. VP, Creative</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. VP Content Production</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr Director Marketing Operations</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr Insights Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr Manager, Information Service</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr Marketing Operations Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Studio Coordinator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Studio Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Studio Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Team Lead</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Territory Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tour Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Traditional Media Planner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Traffic Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Training Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Vice President, Client Service</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VP, Creative</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VP, Insights</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VP/CPO, Procurement</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VP Content Production</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VP Event Production</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VP Marketing Operations</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VP Post Content Production</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Art Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VP Strategy</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Strategic Planner</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr Copywriter</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Group Account Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Digital Analyst</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Aquistion Ambassador</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Assistant Tour Manager - Tier 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Brand Ambassador/FT Rep</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Brand Ambassador/PT Rep - Tier 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Brand Ambassador/PT Rep - Tier 3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Brand Ambassador/PT Rep- Tier 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Business Account Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Business Operations Director</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Business Operations Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Junior Designer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Manager Analytics</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Marketing Operations Coordinator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Production Designer</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Program Operations Coordinator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Promotional Brand Ambassador FT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Promotional Brand Ambassador PT - Tier 3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Promotional Brand Ambassador PT- Tier 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Promotional Brand Ambassador PT- Tier 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Specialist  PT - Tier 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Specialist FT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Specialist PT-  Tier 1</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Specialist PT - Tier 3</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. Business Account Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. Field Operations Manager</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. Program Operation Manger</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr. Program Operations Coordinator</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Sr./Executive Vice President, Program Operations</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Strategist</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Team Lead - PT</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Tour Manager - Tier 2</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Vice President, Program Operations</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VP Business Operations</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Executive, Client Service</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Cost Rate Lookup</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>Role__c</columns>
+        <columns>Cost_Rate__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>CR-{00000}</displayFormat>
+        <label>Cost Rate Lookup</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Cost Rates Lookup</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>
